@@ -20,7 +20,7 @@ class LLMHandler:
             api_key=OPEN_ROUTER_API
         )
         #
-        # self.model = LLAMA_MODEL
+        self.model = LLAMA_MODEL
     
     def generate_response(self, query: str, search_results: List[Dict[str, Any]]) -> str:
         """Generate response based on query and search results"""
