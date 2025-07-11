@@ -12,15 +12,15 @@ class LLMHandler:
         if not GROQ_API_KEY:
             raise ValueError("GROQ_API_KEY not found in environment variables")
         
-        # self.client = Groq(api_key=GROQ_API_KEY)
-        # self.model = GROQ_MODEL
+        self.client = Groq(api_key=GROQ_API_KEY)
+        self.model = GROQ_MODEL
 
-        self.client =OpenAI(
-            base_url="https://openrouter.ai/api/v1",
-            api_key=OPEN_ROUTER_API
-        )
-
-        self.model = LLAMA_MODEL
+        # self.client =OpenAI(
+        #     base_url="https://openrouter.ai/api/v1",
+        #     api_key=OPEN_ROUTER_API
+        # )
+        #
+        # self.model = LLAMA_MODEL
     
     def generate_response(self, query: str, search_results: List[Dict[str, Any]]) -> str:
         """Generate response based on query and search results"""
