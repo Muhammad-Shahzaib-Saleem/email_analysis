@@ -1,7 +1,7 @@
 from groq import Groq
 from typing import List, Dict, Any
 from config import GROQ_API_KEY, GROQ_MODEL
-from config import QWEN_MODEL,OPEN_ROUTER_API,DEEP_SEEK_MODEL,LLAMA_MODEL
+from config import QWEN_MODEL,OPEN_ROUTER_API,DEEP_SEEK_MODEL,LLAMA_MODEL,OPEN_ROUTER_API_1
 from openai import OpenAI
 
 class LLMHandler:
@@ -16,10 +16,10 @@ class LLMHandler:
 
         self.client =OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key=OPEN_ROUTER_API,
+            api_key=OPEN_ROUTER_API_1,
         )
 
-        self.model = DEEP_SEEK_MODEL
+        self.model = LLAMA_MODEL
     
     def generate_response(self, query: str, search_results: List[Dict[str, Any]]) -> str:
         """Generate response based on query and search results"""
