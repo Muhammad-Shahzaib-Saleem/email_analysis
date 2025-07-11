@@ -1,7 +1,7 @@
 from groq import Groq
 from typing import List, Dict, Any
 from config import GROQ_API_KEY, GROQ_MODEL
-from config import QWEN_MODEL,OPEN_ROUTER_API,DEEP_SEEK_MODEL,LLAMA_MODEL,OPEN_ROUTER_API_1
+from config import QWEN_MODEL,OPEN_ROUTER_API,DEEP_SEEK_MODEL,LLAMA_MODEL
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -20,7 +20,7 @@ class LLMHandler:
 
         self.client =OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key=os.getenv("OPEN_ROUTER_API"),
+            api_key=OPEN_ROUTER_API
         )
 
         self.model = LLAMA_MODEL
