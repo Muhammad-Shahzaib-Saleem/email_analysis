@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+chromadb
+sentence-transformers
+groq
+python-dotenv
+email-validator
+faker
+dotenv
+openai
+beautifulsoup4
+faiss-cpu
+sentence-transformers
