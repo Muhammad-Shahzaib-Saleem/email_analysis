@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
@@ -10,7 +11,7 @@ QWEN_MODEL = "qwen/qwq-32b:free"
 DEEP_SEEK_MODEL="deepseek/deepseek-chat-v3-0324:free"
 LLAMA_MODEL="meta-llama/llama-4-maverick:free"
 
-OPEN_ROUTER_API=os.getenv("OPEN_ROUTER_API")
+OPEN_ROUTER_API=st.secrets["OPEN_ROUTER_API"]
 
 
 # Vector Database Configuration

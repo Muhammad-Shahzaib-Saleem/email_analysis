@@ -1,6 +1,6 @@
 # Environment variables
 .env
-
+.streamlit/secrets.toml
 # Vector database
 vector_db/
 *.db
