@@ -3,10 +3,7 @@ from typing import List, Dict, Any
 from config import GROQ_API_KEY, GROQ_MODEL
 from config import QWEN_MODEL,OPEN_ROUTER_API,DEEP_SEEK_MODEL,LLAMA_MODEL
 from openai import OpenAI
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 class LLMHandler:
     """Handle LLM interactions using Groq API with Llama3"""
